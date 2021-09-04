@@ -1,0 +1,17 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid #e6e5ea;
+  box-sizing: border-box;
+  border-radius: 999px;
+}
+
+.checkbox.checked {
+  background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  border: none;
+}

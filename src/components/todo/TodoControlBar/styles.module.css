@@ -1,0 +1,22 @@
+.container {
+  border-top: 1px solid #e6e5eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 0.75rem;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #939395;
+
+  padding: 1rem 1.25rem;
+}
+
+.clear {
+  cursor: pointer;
+  transition: filter 200ms ease;
+}
+
+.clear:hover {
+  filter: brightness(0.9);
+}

@@ -1,0 +1,34 @@
+.todoForm {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+
+  padding: 0 1.2rem;
+  background-color: var(--bg-color);
+
+  border-radius: 5px;
+}
+
+.todoForm .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.7rem;
+
+  border: 1px solid #e6e5ea;
+  box-sizing: border-box;
+  border-radius: 999px;
+}
+
+.todoForm input {
+  flex: 1;
+  height: 2rem;
+  border: none;
+  outline: none;
+
+  font-size: 0.75rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.todoForm input::placeholder {
+  color: #939395;
+}

@@ -1,0 +1,28 @@
+.container {
+  background-color: var(--bg-color);
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 0.75rem;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #939395;
+
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+}
+
+.link {
+  cursor: pointer;
+  transition: filter 200ms ease;
+}
+
+.link.active {
+  color: blue;
+}
+
+.link:hover {
+  filter: brightness(0.9);
+}
