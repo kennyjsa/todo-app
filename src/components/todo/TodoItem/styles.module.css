@@ -4,6 +4,8 @@
   /* justify-content: left; */
 
   font-size: 0.75rem;
+
+  letter-spacing: -0.015em;
   font-family: 'Josefin Sans', sans-serif;
   padding: 1rem 1.25rem;
 }
