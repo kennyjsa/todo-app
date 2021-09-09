@@ -16,24 +16,18 @@
   cursor: pointer;
   font-size: 0.875rem;
   font-family: 'Josefin Sans', sans-serif;
-  color: hsl(236, 9%, 61%);
+  color: var(--dark-grayish-blue);
   font-weight: 700;
 
-  transition: filter 200ms ease;
+  transition: color 200ms ease;
 }
-/*
-- Very Light Gray: hsl(0, 0%, 98%)
-- Very Light Grayish Blue: hsl(236, 33%, 92%)
-- Light Grayish Blue: hsl(233, 11%, 84%)
-- Dark Grayish Blue: hsl(236, 9%, 61%)
-- Very Dark Grayish Blue: hsl(235, 19%, 35%)
-*/
+
 .link.active {
-  color: hsl(220, 98%, 61%);
+  color: var(--bright-blue);
 }
 
 .link:hover {
-  filter: brightness(0.9);
+  color: var(--very-dark-grayish-blue);
 }
 
 .text {
@@ -44,5 +38,5 @@
   font-size: 0.875rem;
   line-height: 1;
   letter-spacing: -0.015em;
-  color: hsl(236, 9%, 61%);
+  color: var(--dark-grayish-blue);
 }

@@ -11,7 +11,7 @@
 }
 
 .todoItem + .todoItem {
-  border-top: 1px solid #e6e5eb;
+  border-top: 1px solid var(--very-light-grayish-blue);
 }
 
 .text {
@@ -19,7 +19,7 @@
   margin-left: 0.7rem;
 }
 .completed .text {
-  color: #d4d3d8;
+  color: var(--light-grayish-blue);
   text-decoration: line-through;
 }
 

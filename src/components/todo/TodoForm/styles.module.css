@@ -14,7 +14,7 @@
   height: 20px;
   margin-right: 0.7rem;
 
-  border: 1px solid #e6e5ea;
+  border: 1px solid var(--light-grayish-blue);
   box-sizing: border-box;
   border-radius: 999px;
 }
@@ -24,12 +24,12 @@
   height: 2rem;
   border: none;
   outline: none;
-
+  background: none;
   font-size: 0.75rem;
   letter-spacing: -0.015em;
   font-family: 'Josefin Sans', sans-serif;
 }
 
 .todoForm input::placeholder {
-  color: #939395;
+  color: var(--dark-grayish-blue);
 }

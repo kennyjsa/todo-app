@@ -1,5 +1,5 @@
 .container {
-  border-top: 1px solid #e6e5eb;
+  border-top: 1px solid var(--very-light-grayish-blue);
 
   display: flex;
   align-items: center;
@@ -7,7 +7,7 @@
 
   font-size: 0.75rem;
   font-family: 'Josefin Sans', sans-serif;
-  color: #939395;
+  color: var(--dark-grayish-blue);
 
   padding: 1.188rem 1.25rem;
 }
