@@ -4,25 +4,43 @@
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
-  font-size: 0.75rem;
-  font-family: 'Josefin Sans', sans-serif;
-  color: #939395;
-
-  padding: 1rem 1.25rem;
+  padding: 1rem 3.5rem;
   margin-top: 1rem;
 }
 
 .link {
   cursor: pointer;
+  font-size: 0.875rem;
+  font-family: 'Josefin Sans', sans-serif;
+  color: hsl(236, 9%, 61%);
+  font-weight: 400;
+
   transition: filter 200ms ease;
 }
-
+/*
+- Very Light Gray: hsl(0, 0%, 98%)
+- Very Light Grayish Blue: hsl(236, 33%, 92%)
+- Light Grayish Blue: hsl(233, 11%, 84%)
+- Dark Grayish Blue: hsl(236, 9%, 61%)
+- Very Dark Grayish Blue: hsl(235, 19%, 35%)
+*/
 .link.active {
-  color: blue;
+  color: hsl(220, 98%, 61%);
 }
 
 .link:hover {
   filter: brightness(0.9);
+}
+
+.text {
+  margin-top: 2.688rem;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  color: hsl(236, 9%, 61%);
 }
