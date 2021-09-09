@@ -1,5 +1,8 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import { Container } from '../components/Layout/Container'
+import { Header } from '../components/Header'
+import { Main } from '../components/Layout/Main'
 
 import '../styles/globals.css'
 
@@ -34,7 +37,13 @@ function MyApp({ Component, pageProps }: AppProps) {
           <meta name="twitter:description" content={SITE_DESCRIPTION}/>
           <meta property="twitter:image" content={SITE_IMAGE}/> */}
       </Head>
-      <Component {...pageProps} />
+
+      <Container>
+        <Header />
+        <Main>
+          <Component {...pageProps} />
+        </Main>
+      </Container>
     </>
   )
 }
