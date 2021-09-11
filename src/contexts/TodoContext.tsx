@@ -3,14 +3,14 @@ import { v4 as uuidv4 } from 'uuid'
 
 import { ITodo } from '../interfaces/ITodo'
 import { addItem } from '../services/addItem'
-import { checkCompleted } from '../services/checkCompleted'
+import { toogleStatusCompleted } from '../services/toogleStatusCompleted'
 import { deleteItem } from '../services/deleteItem'
 import { listTodos } from '../services/listTodos'
 
 type TodoContextProps = {
   todos: ITodo[]
   addTodo: (text: string) => void
-  markAsCompleted: (id: string) => void
+  toggleCompleted: (id: string) => void
   clearCompleted: () => void
 }
 
@@ -40,8 +40,8 @@ export const TodoContextProvider: FC = ({ children }) => {
     loadTodos()
   }
 
-  const markAsCompleted = async (id: string) => {
-    await checkCompleted(id)
+  const toggleCompleted = async (id: string) => {
+    await toogleStatusCompleted(id)
 
     loadTodos()
   }
@@ -60,7 +60,7 @@ export const TodoContextProvider: FC = ({ children }) => {
 
   return (
     <TodoContext.Provider
-      value={{ todos, addTodo, markAsCompleted, clearCompleted }}
+      value={{ todos, addTodo, toggleCompleted, clearCompleted }}
     >
       {children}
     </TodoContext.Provider>

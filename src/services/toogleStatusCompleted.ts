@@ -1,10 +1,9 @@
-import { ITodo } from '../interfaces/ITodo'
 import { database } from './database'
 
-export async function checkCompleted(id: string) {
+export async function toogleStatusCompleted(id: string) {
   const todo = await database.getValue(id)
   if (!todo) return
 
-  todo.completed = true
+  todo.completed = !todo.completed
   await database.putValue(todo)
 }
