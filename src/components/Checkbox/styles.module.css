@@ -9,6 +9,15 @@
   border: 1px solid #e6e5ea;
   box-sizing: border-box;
   border-radius: 999px;
+
+  cursor: pointer;
+
+  transition: all 200ms ease;
+  user-select: none;
+}
+
+.checkbox:hover {
+  filter: brightness(0.9);
 }
 
 .checkbox.checked {
