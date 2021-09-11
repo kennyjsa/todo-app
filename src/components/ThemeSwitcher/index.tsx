@@ -6,7 +6,12 @@ import Image from 'next/image'
 const ThemeSwitcher: React.FC = () => {
   return (
     <div>
-      <Image src="/assets/images/icon-moon.svg" width="20px" height="20px" />
+      <Image
+        src="/assets/images/icon-moon.svg"
+        alt="icon dark theme"
+        width="20px"
+        height="20px"
+      />
     </div>
   )
 }

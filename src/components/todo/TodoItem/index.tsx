@@ -27,7 +27,12 @@ const TodoItem: React.FC<TodoItemProps> = ({
       <Checkbox checked={completed} onClick={handleClick} />
       <div className={styles.text}>{text}</div>
       <div className={styles.delete}>
-        <Image src="/assets/images/icon-cross.svg" width="12px" height="12px" />
+        <Image
+          src="/assets/images/icon-cross.svg"
+          alt="delete"
+          width="12px"
+          height="12px"
+        />
       </div>
     </div>
   )
