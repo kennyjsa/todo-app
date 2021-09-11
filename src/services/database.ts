@@ -4,7 +4,7 @@ import { ITodo } from '../interfaces/ITodo'
 interface TodoDB extends DBSchema {
   todos: {
     value: ITodo
-    key: number
+    key: string
   }
 }
 
@@ -24,7 +24,6 @@ class Database {
         if (db.objectStoreNames.contains(TABLE_TODOS)) return
 
         db.createObjectStore(TABLE_TODOS, {
-          autoIncrement: true,
           keyPath: 'id'
         })
       }
@@ -40,7 +39,7 @@ class Database {
     }
   }
 
-  public async getValue(id: number) {
+  public async getValue(id: string) {
     const db = await this.getDatabase()
 
     const tx = db.transaction(TABLE_TODOS, 'readonly')
@@ -70,7 +69,7 @@ class Database {
     return result
   }
 
-  public async deleteValue(id: number) {
+  public async deleteValue(id: string) {
     const db = await this.getDatabase()
 
     const tx = db.transaction(TABLE_TODOS, 'readwrite')

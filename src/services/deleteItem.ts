@@ -1,6 +1,6 @@
 import { ITodo } from '../interfaces/ITodo'
 import { database } from './database'
 
-export function deleteItem(id: number) {
-  database.deleteValue(id)
+export async function deleteItem(id: string) {
+  await database.deleteValue(id)
 }

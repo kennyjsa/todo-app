@@ -1,6 +1,6 @@
 import { ITodo } from '../interfaces/ITodo'
 import { database } from './database'
 
-export function addItem(todo: ITodo) {
-  database.putValue(todo)
+export async function addItem(todo: ITodo) {
+  await database.putValue(todo)
 }
