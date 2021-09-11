@@ -11,6 +11,9 @@
   --bright-blue: hsl(220, 98%, 61%);
   --check-background-start: hsl(192, 100%, 67%);
   --check-background-end: hsl(280, 87%, 65%);
+
+  --main-margin: 0 1.5rem;
+  --main-width: auto;
 }
 
 html,
@@ -28,4 +31,12 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* * Desktop style */
+@media (min-width: 600px) {
+  :root {
+    --main-margin: 0 auto;
+    --main-width: 540px;
+  }
 }
