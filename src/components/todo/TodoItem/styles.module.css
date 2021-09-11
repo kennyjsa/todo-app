@@ -17,6 +17,8 @@
 .text {
   flex: 1;
   margin-left: 0.7rem;
+
+  transition: color 150ms ease;
 }
 .completed .text {
   color: var(--light-grayish-blue);

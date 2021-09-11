@@ -1,20 +1,34 @@
 import React from 'react'
 import { useTodos } from '../../../hooks/useTodos'
 import { TodoControlBar } from '../TodoControlBar'
+import { TodoFilter } from '../TodoFilter'
 import TodoItem from '../TodoItem'
 
 import styles from './styles.module.css'
 
 export const TodoList: React.FC = () => {
-  const { todos } = useTodos()
+  const { todos, toggleCompleted } = useTodos()
+
+  const handleToggleComplete = (id: string) => {
+    toggleCompleted(id)
+  }
 
   return (
-    <div className={styles.todoList}>
-      {todos.map((x) => (
-        <TodoItem key={x.id} completed={x.completed} text={x.text} />
-      ))}
-      <TodoControlBar />
-    </div>
+    <>
+      <div className={styles.todoList}>
+        {todos.map((x) => (
+          <TodoItem
+            key={x.id}
+            id={x.id}
+            completed={x.completed}
+            text={x.text}
+            onToggleComplete={handleToggleComplete}
+          />
+        ))}
+        <TodoControlBar />
+      </div>
+      <TodoFilter />
+    </>
   )
 }
 
