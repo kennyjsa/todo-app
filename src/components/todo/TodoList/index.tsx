@@ -11,7 +11,7 @@ export const TodoList: React.FC = () => {
   const [filteredTodos, setFilteredTodos] = useState<ITodo[]>([])
   const [filter, setFilter] = useState<'all' | 'active' | 'completed'>('all')
 
-  const { todos, toggleCompleted } = useTodos()
+  const { todos, toggleCompleted, deleteTodo, clearCompleted } = useTodos()
 
   useEffect(() => {
     switch (filter) {
@@ -33,6 +33,13 @@ export const TodoList: React.FC = () => {
     toggleCompleted(id)
   }
 
+  const handleDelete = (id: string) => {
+    deleteTodo(id)
+  }
+  const handleClearCompleted = () => {
+    clearCompleted()
+  }
+
   return (
     <>
       <div className={styles.todoList}>
@@ -43,9 +50,13 @@ export const TodoList: React.FC = () => {
             completed={x.completed}
             text={x.text}
             onToggleComplete={handleToggleComplete}
+            onDelete={handleDelete}
           />
         ))}
-        <TodoControlBar />
+        <TodoControlBar
+          count={todos.filter((x) => !x.completed).length}
+          onClearCompleted={handleClearCompleted}
+        />
       </div>
       <TodoFilter
         filter={filter}

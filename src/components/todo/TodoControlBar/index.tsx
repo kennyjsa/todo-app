@@ -2,11 +2,23 @@ import React from 'react'
 
 import styles from './styles.module.css'
 
-export const TodoControlBar: React.FC = () => {
+type TodoControlBarProps = {
+  count: number
+  onClearCompleted: () => void
+}
+
+export const TodoControlBar: React.FC<TodoControlBarProps> = ({
+  count,
+  onClearCompleted
+}) => {
   return (
     <div className={styles.container}>
-      <div>5 items left</div>
-      <div className={styles.clear}>Clear Completed</div>
+      <div>
+        {count} {count > 1 ? 'items' : 'item'} left
+      </div>
+      <button onClick={onClearCompleted} className={styles.clear}>
+        Clear Completed
+      </button>
     </div>
   )
 }

@@ -10,6 +10,7 @@ import { listTodos } from '../services/listTodos'
 type TodoContextProps = {
   todos: ITodo[]
   addTodo: (text: string) => void
+  deleteTodo: (id: string) => void
   toggleCompleted: (id: string) => void
   clearCompleted: () => void
 }
@@ -46,6 +47,12 @@ export const TodoContextProvider: FC = ({ children }) => {
     loadTodos()
   }
 
+  const deleteTodo = async (id: string) => {
+    await deleteItem(id)
+
+    loadTodos()
+  }
+
   const clearCompleted = async () => {
     const completedList = todos.filter((x) => x.completed)
 
@@ -60,7 +67,7 @@ export const TodoContextProvider: FC = ({ children }) => {
 
   return (
     <TodoContext.Provider
-      value={{ todos, addTodo, toggleCompleted, clearCompleted }}
+      value={{ todos, addTodo, deleteTodo, toggleCompleted, clearCompleted }}
     >
       {children}
     </TodoContext.Provider>
