@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTodos } from '../../../hooks/useTodos'
+import { ITodo } from '../../../interfaces/ITodo'
 import { TodoControlBar } from '../TodoControlBar'
 import { TodoFilter } from '../TodoFilter'
 import TodoItem from '../TodoItem'
@@ -7,7 +8,26 @@ import TodoItem from '../TodoItem'
 import styles from './styles.module.css'
 
 export const TodoList: React.FC = () => {
+  const [filteredTodos, setFilteredTodos] = useState<ITodo[]>([])
+  const [filter, setFilter] = useState<'all' | 'active' | 'completed'>('all')
+
   const { todos, toggleCompleted } = useTodos()
+
+  useEffect(() => {
+    switch (filter) {
+      case 'all':
+        setFilteredTodos(todos)
+        break
+
+      case 'active':
+        setFilteredTodos(todos.filter((x) => !x.completed))
+        break
+
+      case 'completed':
+        setFilteredTodos(todos.filter((x) => x.completed))
+        break
+    }
+  }, [filter, todos])
 
   const handleToggleComplete = (id: string) => {
     toggleCompleted(id)
@@ -16,7 +36,7 @@ export const TodoList: React.FC = () => {
   return (
     <>
       <div className={styles.todoList}>
-        {todos.map((x) => (
+        {filteredTodos.map((x) => (
           <TodoItem
             key={x.id}
             id={x.id}
@@ -27,7 +47,10 @@ export const TodoList: React.FC = () => {
         ))}
         <TodoControlBar />
       </div>
-      <TodoFilter />
+      <TodoFilter
+        filter={filter}
+        onChangeFilter={(filter) => setFilter(filter)}
+      />
     </>
   )
 }
