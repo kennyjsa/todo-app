@@ -18,10 +18,10 @@ export const Checkbox: React.FC<CheckboxProps> = ({ checked, onClick }) => {
     >
       {checked && (
         <Image
+          className={styles.icon}
           src="/assets/images/icon-check.svg"
           alt="Check"
-          width="9px"
-          height="8px"
+          layout="fill"
         />
       )}
     </div>
