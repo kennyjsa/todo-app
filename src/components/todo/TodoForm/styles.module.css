@@ -33,3 +33,25 @@
 .todoForm input::placeholder {
   color: var(--dark-grayish-blue);
 }
+
+/* * Desktop style */
+@media (min-width: 600px) {
+  .todoForm {
+    height: 4rem;
+    padding: 0 1.5rem;
+  }
+
+  .todoForm .icon {
+    width: 24px;
+    height: 24px;
+
+    margin-right: 1.5rem;
+  }
+
+  .todoForm input {
+    height: 4rem;
+
+    font-size: 1.188rem;
+    letter-spacing: -0.04em;
+  }
+}

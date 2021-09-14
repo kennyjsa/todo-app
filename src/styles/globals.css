@@ -14,6 +14,7 @@
 
   --main-margin: 0 1.5rem;
   --main-width: auto;
+  --main-translate-y: -5.75rem;
 }
 
 html,
@@ -38,5 +39,6 @@ a {
   :root {
     --main-margin: 0 auto;
     --main-width: 540px;
+    --main-translate-y: -8.875rem;
   }
 }

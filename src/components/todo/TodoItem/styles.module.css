@@ -1,13 +1,12 @@
 .todoItem {
   display: flex;
   align-items: center;
-  /* justify-content: left; */
+  height: 3rem;
 
   font-size: 0.75rem;
-
   letter-spacing: -0.015em;
   font-family: 'Josefin Sans', sans-serif;
-  padding: 1rem 1.25rem;
+  padding: 0 1.25rem;
 }
 
 .todoItem + .todoItem {
@@ -33,4 +32,18 @@
 
 .delete:hover {
   filter: brightness(0.09);
+}
+
+/* * Desktop style */
+@media (min-width: 600px) {
+  .todoItem {
+    height: 4rem;
+
+    font-size: 1.188rem;
+    letter-spacing: -0.04em;
+  }
+
+  .text {
+    margin-left: 1.5rem;
+  }
 }
