@@ -5,9 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "predeploy": "yarn build && yarn build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@types/uuid": "^8.3.1",
@@ -32,8 +35,10 @@
     "eslint-config-next": "11.1.2",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gh-pages": "^3.2.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.1.0",
     "prettier": "^2.3.2",
