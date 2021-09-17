@@ -9,7 +9,7 @@
   height: 20px;
 
   border: 1px solid transparent;
-  background: #ffffff;
+  background: var(--bg-todo-color);
   background-clip: padding-box;
 
   box-sizing: border-box;
@@ -31,11 +31,11 @@
   z-index: 1;
   margin: -1px;
   border-radius: inherit;
-  background: var(--light-grayish-blue);
+  background: var(--checkbox-unchecked-color);
   background: linear-gradient(
     0,
-    var(--light-grayish-blue),
-    var(--light-grayish-blue)
+    var(--checkbox-unchecked-color),
+    var(--checkbox-unchecked-color)
   );
 
   transition: all 200ms ease;
@@ -55,7 +55,7 @@
   z-index: 2;
 
   border-radius: inherit;
-  background: #fff;
+  background: var(--bg-todo-color);
 
   transition: all 200ms ease;
 }

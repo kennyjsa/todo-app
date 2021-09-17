@@ -17,10 +17,12 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head />
 
-        <body>
-          <Main />
-          <NextScript />
-        </body>
+        
+          <body>
+            <Main />
+            <NextScript />
+          </body>
+        
       </Html>
     )
   }

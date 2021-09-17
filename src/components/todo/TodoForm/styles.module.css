@@ -4,7 +4,7 @@
   height: 3rem;
 
   padding: 0 1.2rem;
-  background-color: var(--bg-color);
+  background-color: var(--bg-todo-color);
 
   border-radius: 5px;
 }
@@ -14,7 +14,7 @@
   height: 20px;
   margin-right: 0.7rem;
 
-  border: 1px solid var(--light-grayish-blue);
+  border: 1px solid var(--checkbox-unchecked-color);
   box-sizing: border-box;
   border-radius: 999px;
 }

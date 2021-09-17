@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Container } from '../components/Layout/Container'
 import { Header } from '../components/Layout/Header'
 import { Main } from '../components/Layout/Main'
+import { ThemeProvider } from "../contexts/ThemeContext";
 
 import '../styles/globals.css'
 
@@ -37,13 +38,15 @@ function MyApp({ Component, pageProps }: AppProps) {
           <meta name="twitter:description" content={SITE_DESCRIPTION}/>
           <meta property="twitter:image" content={SITE_IMAGE}/> */}
       </Head>
-
-      <Container>
-        <Header />
-        <Main>
-          <Component {...pageProps} />
-        </Main>
-      </Container>
+      
+      <ThemeProvider>
+        <Container>
+          <Header />
+          <Main>
+            <Component {...pageProps} />
+          </Main>
+        </Container>
+      </ThemeProvider>
     </>
   )
 }

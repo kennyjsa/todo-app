@@ -5,9 +5,9 @@
 
   margin-top: 1rem;
   padding: 0;
-  background-color: #fff;
+  background-color: var(--bg-todo-color);
 
-  box-shadow: 0px 20px 50px -10px var(--very-light-grayish-blue);
+  box-shadow: 0px 20px 50px -10px var(--shadow-color);
 
   border-radius: 5px;
 }
