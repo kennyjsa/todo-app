@@ -1,0 +1,67 @@
+.container {
+  min-height: 12.5rem;
+  width: 100%;
+  position: relative;
+  /* background-image: url('/assets/images/bg-mobile-light.jpg'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* * mobile light */
+.container .light {
+  display: block;
+}
+
+.container .desktop,
+.container .mobile {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .desktop {
+  display: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 6.813rem;
+  padding-top: 0.875rem;
+  margin: var(--main-margin);
+  width: var(--main-width);
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.75rem;
+  margin: 0;
+  letter-spacing: 0.32em;
+  color: var(--bg-color);
+}
+
+/* * Desktop style */
+@media (min-width: 600px) {
+  .container {
+    min-height: 18.75rem;
+    /* background-image: url('/assets/images/bg-desktop-light.jpg'); */
+  }
+
+  .container .desktop {
+    display: block;
+  }
+  .container .mobile {
+    display: none;
+  }
+
+  .header {
+    padding-top: 5.5rem;
+  }
+
+  .title {
+    font-size: 2.625rem;
+  }
+}
