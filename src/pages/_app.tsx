@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { Container } from '../components/Layout/Container'
-import { Header } from '../components/Header'
+import { Header } from '../components/Layout/Header'
 import { Main } from '../components/Layout/Main'
 
 import '../styles/globals.css'

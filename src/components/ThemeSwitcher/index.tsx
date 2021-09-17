@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 
+import MoonIcon from '../../assets/images/icon-moon.svg'
+import SunIcon from '../../assets/images/icon-sun.svg'
+
 import styles from './styles.module.css'
 
 const ThemeSwitcher: React.FC = () => {
@@ -9,21 +12,13 @@ const ThemeSwitcher: React.FC = () => {
     <div>
       {!isDark && (
         <button className={styles.button}>
-          <Image
-            src="/assets/images/icon-moon.svg"
-            alt="icon dark theme"
-            layout="fill"
-          />
+          <MoonIcon />
         </button>
       )}
 
       {isDark && (
         <button className={styles.button}>
-          <Image
-            src="/assets/images/icon-sun.svg"
-            alt="icon light theme"
-            layout="fill"
-          />
+          <SunIcon />
         </button>
       )}
     </div>

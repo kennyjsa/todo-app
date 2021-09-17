@@ -1,6 +1,5 @@
-import Image from 'next/image'
 import React from 'react'
-
+import CheckIcon from '../../assets/images/icon-check.svg'
 import styles from './styles.module.css'
 
 interface CheckboxProps {
@@ -16,14 +15,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({ checked, onClick }) => {
       //aria-checked={styles.checked}
       onClick={onClick}
     >
-      {checked && (
-        <Image
-          className={styles.icon}
-          src="/assets/images/icon-check.svg"
-          alt="Check"
-          layout="fill"
-        />
-      )}
+      {checked && <CheckIcon className={styles.icon} />}
     </div>
   )
 }

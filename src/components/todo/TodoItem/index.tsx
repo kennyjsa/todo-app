@@ -1,9 +1,8 @@
 import React from 'react'
-import Image from 'next/image'
 import { Checkbox } from '../../Checkbox'
+import CrossIcon from '../../../assets/images/icon-cross.svg'
 
 import styles from './styles.module.css'
-import { ITodo } from '../../../interfaces/ITodo'
 
 interface TodoItemProps {
   id: string
@@ -33,12 +32,7 @@ const TodoItem: React.FC<TodoItemProps> = ({
       <Checkbox checked={completed} onClick={handleClick} />
       <div className={styles.text}>{text}</div>
       <div className={styles.delete} role="button" onClick={handleDelete}>
-        <Image
-          src="/assets/images/icon-cross.svg"
-          alt="delete"
-          width="12px"
-          height="12px"
-        />
+        <CrossIcon />
       </div>
     </div>
   )

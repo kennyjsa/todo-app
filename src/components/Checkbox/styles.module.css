@@ -63,9 +63,8 @@
 .checkbox .icon {
   position: absolute;
   z-index: 10;
-  width: 9px;
-  height: 8px;
-  padding: 5px !important;
+  width: 11px;
+  height: 9px;
 }
 
 .checkbox.checked:after {

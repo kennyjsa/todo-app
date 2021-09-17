@@ -30,6 +30,11 @@
   transition: filter 200ms ease;
 }
 
+.delete svg {
+  width: 12px;
+  height: 12px;
+}
+
 .delete:hover {
   filter: brightness(0.09);
 }
